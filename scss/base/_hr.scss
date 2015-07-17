@@ -1,0 +1,7 @@
+hr {
+	border-color: #eee;
+	border-style: solid none none;
+	border-width: 2px;
+	@include sizing(margin-top);
+	@include sizing(margin-bottom);
+}

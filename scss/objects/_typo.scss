@@ -1,0 +1,57 @@
+.o-title {
+	@include font-size(32px, false);
+	@include sizing(margin-bottom, .5);
+	margin-top: 0;
+	text-transform: uppercase;
+	text-rendering: optimizeLegibility;
+
+	@include media-query($breakpoint-md) {
+		@include font-size(48px, false);
+	}
+
+	@include media-query($breakpoint-lg) {
+		@include font-size(56px, false);
+	}
+}
+
+.o-subtitle {
+	@include font-size(20px, false);
+	@include sizing(margin-bottom);
+	margin: 0;
+	max-width: 35em;
+
+	@include media-query($breakpoint-md) {
+		@include font-size(22px, false);
+	}
+
+	@include media-query($breakpoint-lg) {
+		@include font-size(24px, false);
+	}
+}
+
+.o-subtitle--small {
+	@include font-size(18px, true);
+
+	@include media-query($breakpoint-md) {
+		@include font-size(20px, true);
+	}
+
+	@include media-query($breakpoint-lg) {
+		@include font-size(22px, true);
+	}
+}
+
+.o-heading-auxiliary {
+	@include font-size(24px, false);
+	font-weight: 600;
+	line-height: 1;
+}
+
+.o-heading-tertiary {
+	color: $color-slate;
+	@include font-size(18px, false);
+	line-height: 1;
+	margin: 0;
+	@include sizing(margin-bottom, .5);
+	text-transform: uppercase;
+}

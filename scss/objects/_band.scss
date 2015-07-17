@@ -1,0 +1,9 @@
+.o-band {
+	@include sizing(padding-top, $layout-padding-unitless);
+	@include sizing(padding-bottom, $layout-padding-unitless);
+}
+
+.o-band--lean {
+	@include sizing(padding-top, $layout-padding-unitless/2);
+	@include sizing(padding-bottom, $layout-padding-unitless/2);
+}

@@ -1,22 +1,56 @@
-// Settings
-@import 'settings.typecsset';
+@import 'settings/colors';
+@import 'settings/fonts';
+@import 'settings/typo';
+@import 'settings/layout';
+@import 'settings/breakpoints';
 
-// Tools
-@import 'tools.clearfix';
+@import 'generic/boxsizing';
+@import 'generic/normalize';
+@import 'generic/typecsset';
+@import 'generic/animate';
 
-// Generic
-@import 'generic.normalize';
-@import 'generic.reset';
-@import 'generic.typecsset';
-@import 'generic.boxsizing';
+@import 'tools/typo';
+@import 'tools/responsive';
+@import 'tools/widths';
+@import 'tools/sizing';
+@import 'tools/hidetext';
+@import 'tools/vertical';
+@import 'tools/clearfix';
 
-// Base
-@import 'base.page';
-@import 'base.images';
+@import 'base/page';
+@import 'base/hr';
+@import 'base/typo';
+@import 'base/links';
+@import 'base/form';
+@import 'base/images';
 
-// Objects
+@import 'objects/layout';
+@import 'objects/typo';
+@import 'objects/buttons';
+@import 'objects/island';
+@import 'objects/media';
+@import 'objects/avatar';
+@import 'objects/blocks';
+@import 'objects/band';
+@import 'objects/content';
+@import 'objects/lists';
+@import 'objects/cover';
+@import 'objects/overlay';
+@import 'objects/icons';
+@import 'objects/tag';
+@import 'objects/keyval';
 
-// Components
+@import 'components/header';
+@import 'components/menu';
+@import 'components/hero';
+@import 'components/services';
+@import 'components/testimonials';
+@import 'components/clients';
+@import 'components/cases';
+@import 'components/homecase';
+@import 'components/related';
+@import 'components/twitter';
+@import 'components/footer';
 
-// Trumps
-@import 'trumps.print';
+@import 'trumps/spacing';
+@import 'trumps/print';

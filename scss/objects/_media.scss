@@ -1,0 +1,15 @@
+.o-media {
+	display: block;
+	@extend %u-clearfix;
+}
+
+.o-media__img {
+	float: left;
+}
+
+.o-media__content {
+	overflow: hidden;
+	display: block;
+	padding-right: 2px;
+	@include sizing(padding-left);
+}

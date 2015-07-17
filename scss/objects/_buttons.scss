@@ -1,0 +1,74 @@
+$color-button-default: #eee;
+
+$buttons: (
+	'red': #D12B3B,
+	'green': #58b558,
+	'yellow': #FFC500
+);
+
+.o-btn {
+	$color: $color-button-default;
+	background: linear-gradient(180deg, $color, darken($color, 10%));
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	border: 1px solid;
+	border-color: darken($color, 3%) darken($color, 8%) darken($color, 15%);
+	border-radius: 3px;
+	box-shadow: 0 1px 1px transparentize(#000, .85);
+	color: darken($color, 40%);
+	cursor: pointer;
+	display: inline-block;
+	@include font-size(16px);
+	font-weight: 600;
+	letter-spacing: .025em;
+	padding: .55em 1.5em;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 0 1px 0 transparentize(#fff, .75);
+	text-rendering: optimizeLegibility;
+	user-select: none;
+	vertical-align: middle;
+	-webkit-appearance: none;
+
+	&:focus { outline: none; }
+	&:hover,
+	&:focus {
+		background: linear-gradient(180deg, lighten($color, 2%), darken($color, 8%));
+		border-color: darken($color, 5%) darken($color, 10%) darken($color, 17%);
+		color: darken($color, 40%);
+		text-decoration: none;
+	}
+	&:active {
+		background: linear-gradient(180deg, darken($color, 10%), $color);
+		border-color: darken($color, 15%) darken($color, 8%) darken($color, 3%);
+		box-shadow: inset 0 1px 1px transparentize(#000, .85);
+		top: 1px;
+	}
+}
+
+.o-btn--sm {
+	@include font-size(14px);
+	padding: .25em .75em;
+}
+
+@each $name, $color in $buttons {
+	.o-btn--#{$name} {
+		background: linear-gradient(180deg, $color, darken($color, 10%));
+		border-color: darken($color, 3%) darken($color, 8%) darken($color, 15%);
+		color: lighten($color, 25%);
+		text-shadow: 0 -1px 0 transparentize(#000, .85);
+
+		&:hover,
+		&:focus {
+			background: linear-gradient(180deg, lighten($color, 2%), darken($color, 8%));
+			border-color: darken($color, 5%) darken($color, 10%) darken($color, 17%);
+			color: lighten($color, 30%);
+		}
+		&:active {
+			background: linear-gradient(180deg, darken($color, 10%), $color);
+			border-color: darken($color, 15%) darken($color, 8%) darken($color, 3%);
+			color: lighten($color, 25%);
+		}
+	}
+}

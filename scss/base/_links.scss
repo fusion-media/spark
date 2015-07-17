@@ -1,0 +1,14 @@
+$color-link: #0000ca
+
+a {
+	color: lighten($color-link, 0%);
+	position: relative;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		color: lighten($color-link, 10%);
+		text-decoration: underline;
+	}
+	&:active { top: 1px; }
+}

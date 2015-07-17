@@ -1,0 +1,12 @@
+.o-icon {
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+$icons: menu, graphic, ux, events;
+
+@each $icon in $icons {
+	.o-icon--#{$icon} {
+		background-image: url('../img/icon-#{$icon}.png');
+	}
+}

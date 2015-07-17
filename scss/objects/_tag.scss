@@ -1,0 +1,8 @@
+.o-tag {
+	border-radius: 4px;
+	display: inline-block;
+	@include font-size(14px, false);
+	@include sizing(margin-bottom, 1);
+	padding: .25em .5em;
+	text-transform: uppercase;
+}
