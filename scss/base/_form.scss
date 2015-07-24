@@ -1,7 +1,11 @@
-label {
+label,
+legend {
 	display: block;
 	font-weight: 600;
+	vertical-align: middle;
 	@include sizing(margin-top, 1);
+
+	// &:after { content: ':'; }
 
 	&:first-child { margin-top: 0; }
 }
@@ -27,4 +31,30 @@ textarea {
 textarea {
 	min-height: 12em;
 	max-width: 36em;
+}
+
+select {
+	max-width: 25em;
+	width: 100%;
+}
+
+fieldset {
+	border: none;
+	@include sizing(margin-top, 1);
+	padding: 0;
+
+	&:first-child { margin-top: 0; }
+
+	label {
+		@include font-size(16px, false);
+		font-weight: 500;
+
+		@include sizing(margin-top, .25);
+	}
+}
+
+input[type=radio],
+input[type=checkbox] {
+	@include sizing(margin-right, .125);
+	width: auto;
 }

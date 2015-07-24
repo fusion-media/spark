@@ -1,6 +1,9 @@
 .o-tag {
+	background-color: map-get($colors, ltGray);
 	border-radius: 4px;
+	color: map-get($colors, contentBgr);
 	display: inline-block;
+	font-family: map-get($fonts, heading);
 	@include font-size(14px, false);
 	@include sizing(margin-bottom, 1);
 	padding: .25em .5em;

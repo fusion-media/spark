@@ -1,8 +1,9 @@
-$color-button-default: #eee;
+$color-button-default: #c6cbd0;
 
 $buttons: (
 	'red': #D12B3B,
 	'green': #58b558,
+	'blue': map-get($colors, fusionBlue),
 	'yellow': #FFC500
 );
 
@@ -18,6 +19,7 @@ $buttons: (
 	color: darken($color, 40%);
 	cursor: pointer;
 	display: inline-block;
+	font-family: map-get($fonts, heading);
 	@include font-size(16px);
 	font-weight: 600;
 	letter-spacing: .025em;
@@ -50,6 +52,11 @@ $buttons: (
 .o-btn--sm {
 	@include font-size(14px);
 	padding: .25em .75em;
+}
+
+.o-btn--block {
+	display: block;
+	@include sizing(margin-top, .5);
 }
 
 @each $name, $color in $buttons {

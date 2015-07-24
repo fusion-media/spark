@@ -1,11 +1,13 @@
-$color-ltGray: lighten(#818990, 20%);
-$color-dkGray: #818990;
-$color-slate: darken(#93a1a9, 20%);
-$color-fusionBlue: #158cc8;
-$color-fusionDk: #3D474D;
-$color-yellow: #FEC501;
+$colors: (
+	ltGray: lighten(#818990, 20%),
+	dkGray: #818990,
+	slate: darken(#93a1a9, 20%),
+	fusionBlue: #158cc8,
+	fusionDk: #3d474d,
+	fusionYellow: #fec501,
 
-$color-pageBgr: #fff;
-$color-contentBgr: #f8f8f8;
-$color-bodyText: #484b4d;
-$color-selection: lighten($color-fusionBlue, 20%);
+	pageBgr: #fff,
+	contentBgr: #f8f8f8,
+	bodyText: #484b4d,
+	selection: lighten(#158cc8, 20%)
+);

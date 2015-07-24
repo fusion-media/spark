@@ -1,4 +1,4 @@
-$color-link: #0000ca;
+$color-link: map-get($colors, fusionBlue);
 
 a {
 	color: lighten($color-link, 0%);

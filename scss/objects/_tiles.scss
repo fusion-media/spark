@@ -1,9 +1,7 @@
-$color-tile-container: #444;
-
 .o-tiles {
 	@extend %o-list-bare;
 
-	@include media-query($breakpoint-lg) {
+	@include media('>lg') {
 		@include sizing(margin-left, -.5);
 		@include sizing(margin-right, -.5);
 
@@ -18,7 +16,7 @@ $color-tile-container: #444;
 .o-tile {
 	@include sizing(margin-bottom, 1);
 
-	@include media-query($breakpoint-sm) {
+	@include media('>sm') {
 		float: left;
 		width: 50%;
 
@@ -31,7 +29,7 @@ $color-tile-container: #444;
 		}
 	}
 
-	@include media-query($breakpoint-lg) {
+	@include media('>lg') {
 		width: 25%;
 
 		&:nth-of-type(4n-3) {
@@ -57,7 +55,7 @@ $color-tile-container: #444;
 }
 
 .o-tile--big {
-	@include media-query($breakpoint-lg) {
+	@include media('>lg') {
 		width: 50%;
 
 		.o-tile__title {
@@ -67,12 +65,10 @@ $color-tile-container: #444;
 }
 
 .o-tile__container {
-	background-color: $color-tile-container;
-	border-radius: 3px;
+	background-color: map-get($colors, fusionBlue);
 	display: block;
 	overflow: hidden;
 	position: relative;
-	box-shadow: 0 1px 2px #aaa;
 
 	&:before {
 		content: '';
@@ -87,23 +83,9 @@ $color-tile-container: #444;
 	right: 0;
 	bottom: 0;
 	left: 0;
-
-	&:hover,
-	&:focus {
-		.o-tile__img {
-			filter: blur(3px) saturate(25%);
-			opacity: .5;
-			transform: scale(1);
-		}
-		.o-tile__content {
-			opacity: 1;
-			transform: translateY(-50%) scale(1);
-		}
-	}
 }
 
 .o-tile__img {
-	transition: all .5s ease;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -112,7 +94,6 @@ $color-tile-container: #444;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	transform: scale(1.125);
 }
 
 .o-tile__content {
@@ -120,21 +101,5 @@ $color-tile-container: #444;
 	top: 50%;
 	right: 0;
 	left: 0;
-	text-align: center;
-	transform: translateY(-50%) scale(.95);
-	opacity: 0;
-	text-shadow: 0 1px 0 transparentize(#000, .5);
-	transition: all .35s ease;
-}
-
-.o-tile__title {
-	color: #fff;
-	@include font-size(20px, false);
-	line-height: 1;
-	margin: 0;
-	text-transform: uppercase;
-}
-
-.o-tile__type {
-	color: #ccc;
+	transform: translateY(-50%);
 }

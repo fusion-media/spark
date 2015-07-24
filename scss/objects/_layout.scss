@@ -6,45 +6,8 @@
 	@include sizing(padding-right);
 	@include clearfix();
 
-	@include media-query($breakpoint-sm) {
+	@include media('>sm') {
 		@include sizing(padding-left, 2);
 		@include sizing(padding-right, 2);
 	}
-}
-
-.o-inner--bordered {
-	position: relative;
-
-	&:after {
-		border-top: 2px #ddd solid;
-		content: '';
-		display: block;
-		position: absolute;
-		// @include sizing(bottom, -$layout-padding-unitless);
-		@include sizing(left);
-		@include sizing(right);
-
-		@include media-query($breakpoint-sm) {
-			@include sizing(left, 2);
-			@include sizing(right, 2);
-		}
-	}
-}
-
-.u-border-cheat {
-	display: inline-block;
-	position: relative;
-	width: 100%;
-
-	&:before,
-	&:after {
-		border-top: 2px #ddd solid;
-		content: '';
-		display: block;
-		position: absolute;
-		left: 0;
-		right: 0;
-	}
-	&:before { @include sizing(top, -$layout-padding-unitless); }
-	&:after { @include sizing(bottom, -$layout-padding-unitless); }
 }

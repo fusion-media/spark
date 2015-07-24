@@ -1,4 +1,5 @@
 .o-content {
+	color: darken(map-get($colors, slate), 10%);
 	text-align: left;
 
 	* { max-width: 36em; }
@@ -12,6 +13,12 @@
 		border: none;
 		box-shadow: none;
 	}
+
+	h2 {
+		color: map-get($colors, slate);
+		text-transform: uppercase;
+	}
+	h3 { color: map-get($colors, ltGray); }
 
 	*:last-child { margin-bottom: 0; }
 }
@@ -31,7 +38,7 @@
 .c-articles__meta {
 	display: none;
 
-	@include media-query($breakpoint-md) {
+	@include media('>md') {
 		display: block;
 	}
 }
@@ -40,7 +47,7 @@
 	border-bottom: 2px #eee solid;
 	@include sizing(padding-bottom, 1.5);
 
-	@include media-query($breakpoint-md) {
+	@include media('>md') {
 		border-bottom: none;
 	}
 }

@@ -1,6 +1,15 @@
 h1, h2, h3, h4, h5, h6 {
-	color: #222;
+	color: map-get($colors, fusionDk);
+	font-family: map-get($fonts, heading);
+	text-transform: uppercase;
+}
+h2 {
+	color: map-get($colors, slate);
+}
+h3 {
+	color: map-get($colors, ltGray);
+	text-transform: none;
 }
 
-::selection 	 { background-color: $color-selection; }
-::-moz-selection { background-color: $color-selection; }
+::selection 	 { background-color: map-get($colors, selection); }
+::-moz-selection { background-color: map-get($colors, selection); }

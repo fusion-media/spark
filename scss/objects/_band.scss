@@ -1,6 +1,11 @@
 .o-band {
 	@include sizing(padding-top, $layout-padding-unitless);
 	@include sizing(padding-bottom, $layout-padding-unitless);
+
+	@include media('>lg') {
+		@include sizing(padding-top, $layout-padding-unitless * 1.5);
+		@include sizing(padding-bottom, $layout-padding-unitless * 1.5);
+	}
 }
 
 .o-band--lean {

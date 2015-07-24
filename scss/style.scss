@@ -7,10 +7,10 @@
 @import 'generic/boxsizing';
 @import 'generic/normalize';
 @import 'generic/typecsset';
+@import 'generic/media';
 @import 'generic/animate';
 
 @import 'tools/typo';
-@import 'tools/responsive';
 @import 'tools/widths';
 @import 'tools/sizing';
 @import 'tools/hidetext';
@@ -38,19 +38,9 @@
 @import 'objects/overlay';
 @import 'objects/icons';
 @import 'objects/tag';
-@import 'objects/keyval';
+@import 'objects/tiles';
 
-@import 'components/header';
-@import 'components/menu';
-@import 'components/hero';
-@import 'components/services';
-@import 'components/testimonials';
-@import 'components/clients';
-@import 'components/cases';
-@import 'components/homecase';
-@import 'components/related';
-@import 'components/twitter';
-@import 'components/footer';
+// @import 'components/header';
 
 @import 'trumps/spacing';
 @import 'trumps/print';

@@ -1,5 +1,5 @@
 html {
-	background-color: $color-pageBgr;
+    background-color: map-get($colors, pageBgr);
     overflow-y: scroll;
     min-height: 100%;
     -webkit-text-size-adjust: 100%;
@@ -9,7 +9,8 @@ html {
 }
 
 body {
-	background-color: $color-contentBgr;
-	color: $color-bodyText;
+    background-color: map-get($colors, contentBgr);
+    color: map-get($colors, bodyText);
+    font-family: map-get($fonts, body);
     min-width: 320px;
 }
